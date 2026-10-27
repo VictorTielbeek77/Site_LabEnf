@@ -1,0 +1,142 @@
+{
+  "source_scan": {
+    "files_scanned": 48,
+    "findings": [],
+    "scope": "arquivos versionáveis, excluindo binários; somente padrões conhecidos"
+  },
+  "pdf": {
+    "pages": 4,
+    "size_bytes": 150290,
+    "source_sha256": "fc2276351426f5a40e87e4bc809738bef1bdf5b00798c99d2e2ad20c67b10a72",
+    "copy_sha256": "fc2276351426f5a40e87e4bc809738bef1bdf5b00798c99d2e2ad20c67b10a72",
+    "metadata_confirmed": true
+  },
+  "policy": {
+    "version": 1,
+    "vpn_configured": false,
+    "microsoft_hosts_listed": false
+  },
+  "external_checks": [
+    {
+      "service": "scheduling",
+      "method": "GET",
+      "connection_error": "Tunnel connection failed: 403 Forbidden"
+    },
+    {
+      "service": "calendar",
+      "method": "GET",
+      "connection_error": "Tunnel connection failed: 403 Forbidden"
+    },
+    {
+      "service": "loans",
+      "method": "GET",
+      "connection_error": "Tunnel connection failed: 403 Forbidden"
+    }
+  ],
+  "initial_regression": {
+    "startTime": "2026-10-27T16:47:12.838Z",
+    "duration": 23531.163,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "text_overlap_initial": {
+    "startTime": "2026-10-27T16:54:29.104Z",
+    "duration": 2711.9039999999995,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "resources": {
+    "observations": [
+      {
+        "route": "/",
+        "status": 200,
+        "title": "Laboratório de Enfermagem/FS",
+        "description": "Consulte a disponibilidade, solicite agendamentos de atividades práticas e empréstimos de materiais e acesse os POPs do laboratório."
+      },
+      {
+        "route": "/agendamento",
+        "status": 200,
+        "title": "Agendamento de atividades práticas | Laboratório de Enfermagem/FS",
+        "description": "Consulte o calendário e solicite uma atividade prática pelo Microsoft Forms com sua conta @unb.br."
+      },
+      {
+        "route": "/calendario",
+        "status": 200,
+        "title": "Calendário e disponibilidade | Laboratório de Enfermagem/FS",
+        "description": "Consulte a disponibilidade e os títulos das atividades no calendário oficial do laboratório, antes de solicitar um agendamento."
+      },
+      {
+        "route": "/pops",
+        "status": 200,
+        "title": "Procedimentos Operacionais Padrão | Laboratório de Enfermagem/FS",
+        "description": "Consulte e baixe o PDF original de Gerenciamento e descarte seguro de resíduos, com sua nota de aplicação e dados de versão."
+      },
+      {
+        "route": "/emprestimos",
+        "status": 200,
+        "title": "Empréstimos de materiais | Laboratório de Enfermagem/FS",
+        "description": "Solicite empréstimos de materiais pelo formulário oficial no Microsoft Forms, com sua conta institucional @unb.br. O envio não autoriza o empréstimo nem garante disponibilidade."
+      },
+      {
+        "route": "/sobre",
+        "status": 200,
+        "title": "Sobre o laboratório | Laboratório de Enfermagem/FS",
+        "description": "Conheça o Laboratório de Enfermagem/FS, no Campus UnB Asa Norte, e encontre os acessos aos serviços do laboratório."
+      }
+    ],
+    "assetCount": 8,
+    "errors": [],
+    "failedRequests": [],
+    "badResponses": []
+  },
+  "final_tests": {
+    "startTime": "2026-10-27T16:57:13.263Z",
+    "duration": 48147.986,
+    "expected": 34,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "runtime_network_policy_state": "unknown",
+  "audit_timezone": "America/Sao_Paulo",
+  "versions": {
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "next": "16.4.3",
+    "playwright": "1.64.1",
+    "axe_playwright": "4.14.0",
+    "chromium": "154.0.8037.57"
+  },
+  "final_checks": {
+    "lint_exit_code": 0,
+    "typecheck_exit_code": 0,
+    "build_exit_code": 0
+  },
+  "fixes": [
+    "favicon ausente",
+    "título da página 404",
+    "foco ao ampliar celular para desktop",
+    "sobreposição no cabeçalho com fonte a 200%"
+  ],
+  "manual_pending": [
+    "calendário público real",
+    "acesso aos dois Forms e restrição @unb.br sem envio de respostas"
+  ],
+  "not_executed": [
+    "Firefox",
+    "Safari",
+    "aparelhos reais",
+    "leitores de tela reais",
+    "avaliação do leitor nativo de PDF",
+    "deploy/GitHub/Vercel"
+  ],
+  "final_source_scan": {
+    "files_scanned": 50,
+    "findings": [],
+    "scope": "arquivos versionáveis, excluindo binários; padrões conhecidos, sem imprimir valores"
+  }
+}
