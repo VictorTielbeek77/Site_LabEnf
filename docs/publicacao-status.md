@@ -12,8 +12,13 @@ criação de conta ou aceite de termos em seu nome.
   o checkout local estava sem commits, no branch `work`.
 - Os arquivos existentes foram preservados. O envio deve ser normal, sem force push;
   conferir o hash remoto depois para comprovar a conclusão.
-- O histórico do Git e o relato da execução registram o commit e o resultado efetivo.
-  Este documento não declara um envio bem-sucedido antecipadamente.
+- O commit da versão foi criado localmente. O teste `git push --dry-run origin
+  main:refs/heads/main` terminou com código 128 e HTTP 403: a conta conectada
+  `MatheusCavalcanteLopes` não tem permissão de escrita neste repositório.
+- Nenhum push efetivo foi executado depois dessa recusa. O remoto não foi alterado;
+  consultas de leitura posteriores devem continuar sendo distinguidas do acesso de escrita.
+- O histórico local do Git e o relato da execução registram o commit correspondente.
+  Ele ainda não está disponível como commit remoto no GitHub.
 
 Os resultados da preparação anterior em `publicacao-vercel.md` descrevem aquela
 etapa histórica. Nesta etapa, lint, tipos, build e testes de produção são executados
@@ -44,6 +49,16 @@ configurado projeto, integração de Git ou publicação automática. Nenhuma se
 ou token deve ser enviado no chat.
 
 ## Ações seguras para desbloquear
+
+Primeiro, para o GitHub: o responsável pelo repositório deve conceder acesso de
+escrita à conta `MatheusCavalcanteLopes` em **Settings → Collaborators** (ou permissões
+equivalentes de equipe), com aceite do convite pela própria conta, ou reconectar a
+integração GitHub deste ambiente com uma conta que já tenha escrita no repositório.
+Preservar o destino e a visibilidade existentes. Não fornecer token ou senha no chat.
+Depois, repetir o teste de envio, revalidar o estado remoto e fazer o push normal
+para `main`, conferindo a igualdade dos hashes local/remoto. Não usar force push.
+
+Para a Vercel:
 
 1. Nas configurações deste ambiente de desenvolvimento, revisar/salvar a liberação
    de `vercel.com` e `api.vercel.com`, preservando os destinos atuais. A inclusão está

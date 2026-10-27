@@ -4,7 +4,8 @@ Site público do Laboratório de Enfermagem/FS, Faculdade de Ciências da Saúde
 Universidade de Brasília, campus UnB Asa Norte. Next.js, TypeScript e Tailwind CSS,
 com seis páginas pré-renderizadas e PDF original incluído no projeto.
 
-**Estado:** versão validada localmente, com envio ao GitHub autorizado. A publicação
+**Estado:** versão validada e commitada localmente, com envio ao GitHub autorizado,
+mas bloqueado por falta de permissão de escrita da conta conectada. A publicação
 na Vercel continua pendente; não há endereço público validado. Consulte o
 [registro de publicação](docs/publicacao-status.md) e o histórico do Git para o estado do envio.
 A elegibilidade e os limites atuais do plano gratuito da Vercel **não foram
