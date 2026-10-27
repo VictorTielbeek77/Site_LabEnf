@@ -20,8 +20,8 @@ npm ci
 npm run dev
 ```
 
-Nesta preparação, os arquivos ainda estão apenas no ambiente de desenvolvimento;
-o repositório remoto ainda não contém esta versão. No ambiente atual, use
+Confirme no histórico remoto a conclusão do envio desta versão antes de cloná-la
+em outro computador. No ambiente de desenvolvimento atual, use
 `cd /workspace/Site_LabEnf` no lugar de clonar.
 
 Se já usa nvm no macOS/Linux, dentro da pasta do projeto execute `nvm install`
@@ -164,5 +164,6 @@ mas não compõem os arquivos enviados ao GitHub.
 - O ESLint 9 emite aviso de fim de suporte. A configuração atual preserva a
   compatibilidade declarada pelos plugins e passa na análise; atualizar a ferramenta
   deve ser uma tarefa própria, com nova validação.
-- Elegibilidade e limites do plano gratuito da Vercel não foram confirmados por
-  bloqueio de acesso à documentação. Ver `docs/publicacao-vercel.md` antes de publicar.
+- A documentação Vercel foi consultada após a publicação do ambiente: o Hobby é
+  limitado a uso pessoal e não comercial. A elegibilidade institucional não foi
+  confirmada. Ver os limites e a condição de publicação em `docs/publicacao-vercel.md`.

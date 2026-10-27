@@ -1,49 +1,65 @@
 # Preparação para GitHub e Vercel — sem publicação
 
-Este documento é um roteiro para a etapa de publicação. Nenhum comando de push,
-conexão de projeto ou deploy foi executado nesta preparação.
+Este documento contém as configurações e condições de publicação. O estado atual
+do envio ao GitHub está no histórico remoto e em `publicacao-status.md`. Nenhum
+projeto Vercel foi conectado ou implantado nesta etapa.
 
-## 1. Elegibilidade e limites do plano gratuito: conferência pendente
+## 1. Plano gratuito: restrição documentada e elegibilidade institucional pendente
 
-**Não há promessa de hospedagem gratuita para este uso institucional.**
+**Não publicar este site no Hobby sem confirmar sua elegibilidade institucional.**
 
-Em 27/10/2026, a tentativa de ler `https://vercel.com/docs/plans/hobby` foi recusada
-pelo proxy: `Tunnel connection failed: 403 Forbidden`, antes de receber conteúdo
-da Vercel. Portanto, não foram confirmadas as condições ou cotas vigentes do Hobby.
-O bloqueio é desta conexão de desenvolvimento, não evidência de indisponibilidade
-do site da Vercel.
-
-O caráter educacional/institucional do laboratório não deve ser tratado como
-autorização automática para qualquer plano gratuito. Não se conclui, sem a leitura
-atual, que este caso seja elegível ou inelegível. Antes de selecionar o plano,
-conferir a documentação e, se houver ambiguidade, obter posicionamento da Vercel.
-
-| Condição/limite a conferir na documentação atual | Situação nesta preparação |
-| --- | --- |
-| Tipos de uso aceitos: pessoal, institucional e comercial | Não confirmado. |
-| Regras de conta, equipe, colaboradores e repositórios GitHub | Não confirmado. |
-| Transferência de dados/CDN, requisições e políticas ao exceder cotas | Não confirmado. |
-| Builds, tempo de compilação, concorrência e quantidade de deploys | Não confirmado. |
-| Limites de projetos, arquivos e tamanho de artefatos | Não confirmado. |
-| Funções e otimização de imagens, caso passem a ser usadas | Não confirmado. |
-| Recursos adicionais, eventual cobrança e regras de atualização de plano | Não confirmado. |
-
-Não foram copiados números antigos ou presumidos limites. O repositório oficial
-de código da Vercel, acessível nesta máquina, não substitui os termos e a tabela
-atual de preços/cotas. Não foi escolhido outro provedor nem contratado plano pago.
-Se uma restrição for confirmada, explicá-la antes de decidir outra solução.
-
-Fontes oficiais a conferir, sem leitura bem-sucedida nesta máquina:
+Em 27/10/2026, após o responsável publicar o ambiente de desenvolvimento,
+a rede ficou aplicada e as três fontes oficiais abaixo responderam HTTP 200:
 
 - [Vercel Hobby](https://vercel.com/docs/plans/hobby)
+- [Fair Use Guidelines — Commercial usage](https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage)
 - [Limites da Vercel](https://vercel.com/docs/limits)
-- [Documentação da Vercel](https://vercel.com/docs)
 
-O domínio `vercel.com` foi acrescentado ao **rascunho** de rede do ambiente,
-preservando as regras anteriores e o preset de gerenciadores de pacotes. Salvar
-o rascunho não aplica a regra. Para concluir a consulta aqui, revisar/salvar nas
-configurações e publicar o **ambiente de desenvolvimento**, não o site; depois
-retestar as páginas oficiais. Não é necessário liberar a rede para rodar o site localmente.
+A documentação afirma: **“Hobby teams are restricted to non-commercial personal
+use only.”** O plano gratuito se destina a uso pessoal e não comercial. Este
+portal presta serviços institucionais de um laboratório universitário; ausência
+de venda ou pagamento não confirma, por si, que esse uso é pessoal e permitido.
+Não foi encontrada nessas páginas uma exceção expressa para este laboratório.
+A elegibilidade precisa de confirmação da Vercel antes de qualquer deploy.
+
+A definição documentada de uso comercial também inclui pagamento a funcionário
+ou consultor envolvido na produção. Não foram presumidos vínculos ou pagamentos
+dos envolvidos neste projeto. Havendo dúvida, a própria documentação orienta
+consultar o suporte da Vercel; nenhuma mensagem foi enviada em nome do responsável.
+
+### Limites relevantes conferidos
+
+Valores consultados em 27/10/2026; podem mudar. As cotas não autorizam um tipo de
+uso que o plano restringe, nem comprovam capacidade para um tráfego ainda desconhecido.
+
+| Recurso/condição | Hobby, conforme documentação consultada |
+| --- | --- |
+| Uso aceito | Pessoal e não comercial. |
+| Fast Data Transfer | 100 GB por mês incluídos. |
+| Fast Origin Transfer | 10 GB por mês incluídos. |
+| Requisições CDN | 1.000.000 por mês incluídas. |
+| Deploys | 100 por dia; rate limit de 100 por hora. |
+| Concorrência | 1 deploy simultâneo. |
+| Build | Máximo de 45 minutos; máquina de 2 vCPUs, 8 GB RAM e disco de 32 GB. |
+| Projetos e domínios | 200 projetos; 50 domínios por projeto. |
+| Upload de fontes pela CLI | Até 100 MB e 15.000 arquivos; não confundir com tamanho de um único PDF. |
+| Funções, se usadas | 1.000.000 invocações/mês, 4 CPU-h e 360 GB-h de memória; duração máxima de 300 s. |
+| Otimização de imagens, se usada | 5.000 transformações, 300.000 leituras e 100.000 gravações de cache/mês. |
+| Colaboração e Git | Sem recursos de colaboração de equipe; Hobby não conecta projetos a repositórios pertencentes a organizações Git. |
+
+O repositório atual pertence a uma conta pessoal, mas isso não transforma o site
+institucional em projeto de uso pessoal. Funções, analytics, armazenamento e
+outros serviços não foram habilitados para consumir as respectivas cotas.
+
+Segundo a página do Hobby, na maioria dos excessos é necessário aguardar até
+30 dias para usar novamente o recurso. Não configurar upgrade automático, trial,
+cartão ou recursos pagos. Nenhum plano pago foi contratado e nenhuma alternativa
+de hospedagem foi selecionada. Primeiro explicar a restrição; depois, se necessário,
+o responsável poderá decidir uma solução que aceite o uso institucional sem custo.
+
+As falhas 403 registradas na preparação anterior eram do proxy e foram resolvidas
+para estas consultas. Não é necessário repetir a configuração de rede ou trocar
+contas GitHub para resolver a condição contratual do Hobby.
 
 ## 2. Node e configuração técnica
 
@@ -68,7 +84,7 @@ planos nem validação de um projeto já criado na Vercel. Conferir também a op
 | Install Command | `npm ci --include=dev` |
 | Build Command | `npm run build` |
 | Output Directory | Padrão do preset Next.js; não configurar `out` |
-| Production Branch | `main`, após existir no GitHub |
+| Production Branch | `main` |
 | Variáveis da aplicação | Nenhuma nesta versão |
 
 As dependências de desenvolvimento são necessárias no build para TypeScript,
@@ -78,44 +94,27 @@ Não foi adicionado `vercel.json`: o preset Next.js e `next.config.ts` já defin
 o comportamento necessário. Não usar `output: "export"` ou hospedar apenas HTML
 sem adaptação: a regra de download por query depende dos cabeçalhos configurados.
 
-## 3. Revisar e enviar o primeiro commit ao GitHub — etapa futura
+## 3. Revisar e enviar alterações ao GitHub
 
-A leitura do remoto funcionou, e ele não anunciou HEAD ou branch main na consulta
-desta preparação. O checkout local está sem commits, no branch `work`, com os
-arquivos do site ainda não enviados. Revalidar o estado imediatamente antes de
-qualquer envio; outra pessoa pode ter alterado o remoto nesse intervalo.
+O destino é `VictorTielbeek77/Site_LabEnf`, branch `main`. Após a publicação do
+ambiente, `gh api user` identificou `VictorTielbeek77`, as permissões do repositório
+incluíram escrita e o teste de push foi aprovado. Não é mais necessário conceder
+acesso à conta anterior ou trocar a identidade de autor dos commits existentes.
 
-Antes do primeiro envio:
+Antes de cada envio autorizado:
 
-1. Revisar os arquivos e executar instalação, lint, tipos, build e testes.
-2. Configurar sua identidade de autor no Git, se necessário, usando seu nome e
-   e-mail escolhido no GitHub; autenticar pelo mecanismo seguro do GitHub.
-3. Conferir `git status` e `git ls-remote --heads origin main`. Se main já existir,
-   preservar e reconciliar o histórico antes de enviar; não usar force push.
-4. Adicionar somente os arquivos do projeto, revisar o conteúdo preparado e criar
-   o commit inicial quando a etapa de envio for autorizada.
+1. Conferir `git status`, o branch atual e `git ls-remote --heads origin main`.
+2. Buscar e comparar alterações remotas, preservando qualquer histórico existente.
+   Se houver divergência, reconciliar antes do envio; não usar force push.
+3. Executar lint, tipos, build e testes para o código alterado.
+4. Selecionar somente os arquivos necessários com `git add <caminhos>`, revisar
+   `git diff --cached` e `git diff --cached --check`, e criar o commit.
+5. Enviar com `git push -u origin main` e comparar o hash remoto com `git rev-parse HEAD`.
 
-Exemplo de seleção explícita dos arquivos, **para executar apenas na etapa autorizada**:
-
-```sh
-git add .gitignore .nvmrc AGENTS.md README.md package.json package-lock.json next.config.ts postcss.config.mjs eslint.config.mjs tsconfig.json playwright.config.ts src public tests docs
-git diff --cached --stat
-git diff --cached
-git commit -m "Cria site do Laboratório de Enfermagem FS"
-```
-
-Se o branch ainda for `work` e não houver outro branch local main, renomeá-lo com
-`git branch -m main`. Se já estiver em main, não renomear. Se houver conflito de
-nomes ou histórico, investigar antes de prosseguir. Depois, somente com autorização:
-
-```sh
-git push -u origin main
-```
-
-O remote origin já aponta para o repositório solicitado; não é necessário recriá-lo.
-Não alterar a visibilidade do repositório sem decisão do responsável. Para transferir
-a manutenção a uma organização ou equipe, preservar permissões e conferir as
-condições do plano antes de configurar colaboração.
+O ZIP `site-labenf.zip` foi criado somente para transferência ao responsável e não
+deve ser adicionado ao commit. Dependências, build, logs, segredos e credenciais
+permanecem fora do versionamento. Não alterar origin, visibilidade ou colaboradores
+sem uma decisão explícita do responsável.
 
 ## 4. Importar na Vercel — depois da conferência do plano e do push
 
@@ -154,9 +153,10 @@ podem acionar novos deploys conforme as configurações do projeto. Executar os
 checks antes de cada envio e conferir o resultado na Vercel. Não assumir que o
 site foi atualizado apenas porque o push terminou.
 
-## 7. Verificação desta preparação — 27/10/2026
+## 7. Registro histórico da preparação anterior — 27/10/2026
 
-As verificações abaixo foram executadas novamente nesta etapa, não apenas
+As verificações abaixo pertencem à preparação anterior, antes da publicação do
+ambiente e da correção da identidade GitHub. Foram executadas, não apenas
 copiadas do relato da auditoria anterior. A suíte iniciou `npm start -- --port 3100`
 para testar o build de produção local.
 

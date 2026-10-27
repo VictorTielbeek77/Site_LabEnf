@@ -4,13 +4,14 @@ Site público do Laboratório de Enfermagem/FS, Faculdade de Ciências da Saúde
 Universidade de Brasília, campus UnB Asa Norte. Next.js, TypeScript e Tailwind CSS,
 com seis páginas pré-renderizadas e PDF original incluído no projeto.
 
-**Estado:** versão validada e commitada localmente, com envio ao GitHub autorizado,
-mas bloqueado por falta de permissão de escrita da conta conectada. A publicação
-na Vercel continua pendente; não há endereço público validado. Consulte o
+**Estado:** versão validada na branch `main`, com acesso de escrita ao GitHub
+confirmado para `VictorTielbeek77`. A publicação na Vercel continua pendente;
+não há endereço público validado. Consulte o
 [registro de publicação](docs/publicacao-status.md) e o histórico do Git para o estado do envio.
-A elegibilidade e os limites atuais do plano gratuito da Vercel **não foram
-confirmados**, pois o acesso à documentação foi recusado pelo proxy. Não há
-promessa de gratuidade para o uso institucional. Leia [publicação na Vercel](docs/publicacao-vercel.md)
+Em 27/10/2026, a documentação oficial da Vercel foi consultada com sucesso:
+o Hobby é restrito a **uso pessoal e não comercial**. O uso institucional deste
+site não foi confirmado como elegível; não há promessa de gratuidade ou deploy
+nesse plano. Leia [publicação na Vercel](docs/publicacao-vercel.md)
 antes de escolher o plano ou publicar.
 
 ## Executar no computador
@@ -121,5 +122,5 @@ público após deploy ainda não foram validados. Detalhes em `docs/auditoria.md
 O ESLint 9 recebe aviso de fim de suporte. Ele permanece fixado por compatibilidade
 dos plugins usados; uma atualização deve ser feita separadamente, com novos checks.
 Node 24 é suportado no código oficial atual da Vercel consultado, mas isso não
-comprova elegibilidade no Hobby ou publicação bem-sucedida. Nenhum recurso pago
+comprova elegibilidade institucional no Hobby ou publicação bem-sucedida. Nenhum recurso pago
 foi habilitado e nenhum plano alternativo foi contratado.

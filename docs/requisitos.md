@@ -178,6 +178,19 @@ Detalhes, resultados e instruções futuras em `docs/manutencao.md` e
 `docs/publicacao-vercel.md`. A preparação local não conclui a avaliação do plano
 gratuito nem comprova funcionamento na hospedagem ainda não criada.
 
+## Atualização após publicação do ambiente — 27/10/2026
+
+- [x] Rede aplicada e documentação oficial da Vercel acessível por HTTP 200.
+- [x] GitHub autenticado como `VictorTielbeek77`, com escrita no repositório correto.
+- [x] Teste de envio para `main` aprovado, sem force push.
+- [x] Restrições e cotas documentadas em `docs/publicacao-vercel.md`.
+- [ ] Elegibilidade institucional no Hobby: exige confirmação, pois o plano limita o uso a pessoal e não comercial.
+- [ ] Integração GitHub–Vercel, deploy e testes no endereço público: não executados.
+
+Os bloqueios anteriores de rede e identidade GitHub foram resolvidos. A restrição
+do plano continua impedindo a publicação na Vercel sob a autorização condicional.
+O resultado efetivo do envio e o commit devem ser conferidos no histórico remoto.
+
 ## Informações ainda ausentes
 
 Logotipo autorizado, fotografias autorizadas, contatos, endereço detalhado,
